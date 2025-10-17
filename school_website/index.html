@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Website - Home</title>
+
+  <!-- ✅ Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0b5a8a;
+      --accent: #f4b400;
+      --light: #f9fbff;
+      --dark: #111;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* ✅ Topbar */
+    .topbar {
+      background: linear-gradient(90deg, #6a1b9a, #904e93);
+      color: white;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+    .topbar input {
+      border-radius: 30px;
+      border: none;
+      padding: 8px 16px;
+      width: 250px;
+    }
+
+    /* ✅ Navbar */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      color: var(--primary) !important;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    .navbar-nav .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    /* ✅ Hero Section */
+    .hero {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(
+          rgba(11, 90, 138, 0.65),
+          rgba(11, 90, 138, 0.65)
+        ),
+        url('images/students_hero_section.jpg') center top / contain no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 900px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #f3f9ff;
+      margin-bottom: 25px;
+    }
+
+    .hero .btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 14px 28px;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .hero .btn:hover {
+      background: #fff;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        background-size: cover;
+        background-position: center center;
+        min-height: 80vh;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero-content {
+        padding: 20px;
+      }
+    }
+
+    section { padding: 100px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      transition: 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+    .card img {
+      border-radius: 12px 12px 0 0;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Topbar -->
+  <div class="topbar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <button class="btn btn-light btn-sm">📄 Download Brochure</button>
+      <input type="text" placeholder="Search..." />
+      <button class="btn btn-warning btn-sm">📩 Enquire Now</button>
+    </div>
+  </div>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">School Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="/about.html">About</a></li>
+          <li><a class="nav-link" href="/why-podar.html">Why Podar</a></li>
+          <li><a class="nav-link" href="/admissions.html">Admissions</a></li>
+          <li><a class="nav-link" href="/locations.html">Locations</a></li>
+          <li><a class="nav-link" href="/careers.html">Careers</a></li>
+          <li><a class="nav-link" href="/alumni.html">Alumni</a></li>
+          <li><a class="nav-link" href="/blogs.html">Blogs</a></li>
+          <li><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Hero -->
+  <section class="hero">
+    <div class="hero-content text-center">
+      <h1>98 Years Of Nurturing Creative Thinkers</h1>
+      <p>Educating thousands of students across India with a blend of tradition and innovation.</p>
+      <button class="btn btn-warning btn-lg">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- ✅ Learning -->
+  <section class="bg-light">
+    <div class="container-xl">
+      <h2 class="section-title">Learning</h2>
+      <p class="text-center mb-5">We inspire curiosity through interactive learning and real-world connections.</p>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card"><img src="images/student1.jpg" alt=""><div class="card-body"><p>Interactive classrooms that build confidence.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/student2.jpg" alt=""><div class="card-body"><p>Project-based learning that drives discovery.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/student3.jpg" alt=""><div class="card-body"><p>Collaborative activities fostering leadership.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Teachers -->
+  <section>
+    <div class="container-xl">
+      <h2 class="section-title">Teachers</h2>
+      <p class="text-center mb-5">Empowering educators to guide and inspire every student toward excellence.</p>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card"><img src="images/teacher.jpg" alt=""><div class="card-body"><p>Professional training and mentorship.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/student4.jpg" alt=""><div class="card-body"><p>One-on-one mentorship for success.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/student5.jpg" alt=""><div class="card-body"><p>Workshops to encourage creativity.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Innovation -->
+  <section class="bg-warning-subtle">
+    <div class="container-xl">
+      <h2 class="section-title">Innovation</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card"><img src="images/innovation.jpg" alt=""><div class="card-body"><p>Hands-on experiments in modern labs.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/research.jpg" alt=""><div class="card-body"><p>Research projects fostering analytical skills.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/award.jpg" alt=""><div class="card-body"><p>Students recognized globally for innovation.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Community -->
+  <section class="bg-light">
+    <div class="container-xl">
+      <h2 class="section-title">Community</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card"><img src="images/campus.jpg" alt=""><div class="card-body"><p>Community engagement programs.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/student6.jpg" alt=""><div class="card-body"><p>Volunteer and leadership initiatives.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/student7.jpg" alt=""><div class="card-body"><p>Events that connect hearts and cultures.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Achievements -->
+  <section>
+    <div class="container-xl">
+      <h2 class="section-title">Achievements & Awards</h2>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="card"><img src="images/award.jpg" alt=""><div class="card-body"><p>National awards for academic excellence.</p></div></div></div>
+        <div class="col-md-3"><div class="card"><img src="images/campus.jpg" alt=""><div class="card-body"><p>Expanding our network nationwide.</p></div></div></div>
+        <div class="col-md-3"><div class="card"><img src="images/innovation.jpg" alt=""><div class="card-body"><p>Innovation labs across all schools.</p></div></div></div>
+        <div class="col-md-3"><div class="card"><img src="images/research.jpg" alt=""><div class="card-body"><p>Student research projects recognized globally.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Our Latest News -->
+  <section class="bg-light">
+    <div class="container-xl">
+      <h2 class="section-title">Our Latest News</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card"><img src="images/news1.jpg" alt=""><div class="card-body"><p>Student wins international science fair.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/news2.jpg" alt=""><div class="card-body"><p>New digital learning hub launched.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/news3.jpg" alt=""><div class="card-body"><p>Annual fest celebrates student creativity.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Podar Initiatives -->
+  <section class="bg-warning-subtle">
+    <div class="container-xl">
+      <h2 class="section-title">Podar Initiatives</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card"><img src="images/initiative1.jpg" alt=""><div class="card-body"><p>Green Campus Drive - promoting sustainability.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/initiative2.jpg" alt=""><div class="card-body"><p>Digital Learning Platforms for innovation.</p></div></div></div>
+        <div class="col-md-4"><div class="card"><img src="images/initiative3.jpg" alt=""><div class="card-body"><p>Community Outreach Programs nationwide.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Quick Links -->
+  <section>
+    <div class="container-xl">
+      <h2 class="section-title">Quick Links</h2>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="quick-card"><i>📘</i><h5>Admissions</h5><p>Join our learning community</p></div></div>
+        <div class="col-md-3"><div class="quick-card"><i>📍</i><h5>Locations</h5><p>Find our nearby branches</p></div></div>
+        <div class="col-md-3"><div class="quick-card"><i>💬</i><h5>Enquiry</h5><p>Reach out with your questions</p></div></div>
+        <div class="col-md-3"><div class="quick-card"><i>🎓</i><h5>Careers</h5><p>Be a part of our growing team</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ About & Branches -->
+  <section class="bg-warning-subtle">
+    <div class="container-xl text-center">
+      <h2 class="section-title">About Us & Branches</h2>
+      <p class="lead mb-5">Established in 1927, our school network has grown to over 150 branches, inspiring excellence and compassion nationwide.</p>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4"><div class="card p-4"><h5>🏫 Head Office</h5><p>Mumbai, Maharashtra</p></div></div>
+        <div class="col-md-4"><div class="card p-4"><h5>📍 Branches</h5><p>Pune, Delhi, Nagpur, Chennai, Bangalore, Hyderabad</p></div></div>
+        <div class="col-md-4"><div class="card p-4"><h5>📞 Contact</h5><p>info@podarschool.com<br>+91-9876543210</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p class="mb-0">© School Website — All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
