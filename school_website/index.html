@@ -52,6 +52,23 @@
       color: var(--accent) !important;
     }
 
+    /* ✅ Dropdown Styling */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.dropdown-item {
+  font-weight: 500;
+  color: var(--primary);
+  transition: 0.3s;
+}
+.dropdown-item:hover {
+  background-color: #f9f9f9;
+  color: var(--accent);
+}
+
+
     /* ✅ Hero Section */
     .hero {
       position: relative;
@@ -175,27 +192,51 @@
   </div>
 
   <!-- ✅ Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">School Website</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li><a class="nav-link" href="#">Home</a></li>
-          <li><a class="nav-link" href="/about.html">About</a></li>
-          <li><a class="nav-link" href="/why-podar.html">Why Podar</a></li>
-          <li><a class="nav-link" href="/admissions.html">Admissions</a></li>
-          <li><a class="nav-link" href="/locations.html">Locations</a></li>
-          <li><a class="nav-link" href="/careers.html">Careers</a></li>
-          <li><a class="nav-link" href="/alumni.html">Alumni</a></li>
-          <li><a class="nav-link" href="/blogs.html">Blogs</a></li>
-          <li><a class="nav-link" href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">School Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li><a class="nav-link" href="#">Home</a></li>
+
+        <!-- ✅ About Podar Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Podar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+            <li><a class="dropdown-item" href="/about.html">About Us</a></li>
+            <li><a class="dropdown-item" href="/chairman-message.html">Chairman’s Message</a></li>
+            <li><a class="dropdown-item" href="/podar-initiatives.html">Podar Initiatives</a></li>
+          </ul>
+        </li>
+
+        <!-- ✅ Why Podar Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="whyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Why Podar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="whyDropdown">
+            <li><a class="dropdown-item" href="/curriculum.html">The Right Curriculum</a></li>
+            <li><a class="dropdown-item" href="/environment.html">The Right Environment</a></li>
+            <li><a class="dropdown-item" href="/approach.html">The Right Approach</a></li>
+          </ul>
+        </li>
+
+        <li><a class="nav-link" href="/admissions.html">Admissions</a></li>
+        <li><a class="nav-link" href="/locations.html">Locations</a></li>
+        <li><a class="nav-link" href="/careers.html">Careers</a></li>
+        <li><a class="nav-link" href="/alumni.html">Alumni</a></li>
+        <li><a class="nav-link" href="/blogs.html">Blogs</a></li>
+        <li><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- ✅ Hero -->
   <section class="hero">
@@ -318,6 +359,40 @@
       </div>
     </div>
   </section>
+
+  <!-- ✅ Contact Us -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" placeholder="Message" rows="4"></textarea>
+          </div>
+          <button class="btn btn-warning">Send Message</button>
+        </form>
+      </div>
+      <div class="col-md-6 contact-info">
+        <p><i>📍</i><strong>Head Office:</strong> Podar Education Complex, Mumbai, Maharashtra</p>
+        <p><i>📞</i><strong>Phone:</strong> +91 9876543210</p>
+        <p><i>✉️</i><strong>Email:</strong> info@podarschool.com</p>
+        <iframe 
+          src="https://www.google.com/maps?q=Podar%20Education%20Mumbai&output=embed" 
+          width="100%" height="300" 
+          style="border-radius:10px; border:none;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- ✅ Footer -->
   <footer>
